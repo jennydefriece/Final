@@ -17,11 +17,11 @@ public class RateBLL {
 		double Rate = 0;
 		
 		for (RateDomainModel x : Rates) {
-			double foundrate;
-			if (GivenCreditScore >= Rates.getiMinCreditScore()) {
-				foundrate = Rates.getdInterestRate();
+			if (Rates.getiMinCreditScore() == GivenCreditScore) {
+				double foundrate = Rates.getdInterestRate();
 				
 			}
+			double foundrate;
 			if (foundrate == 0) {
 				throw new RateException(Rates);
 		}
@@ -30,8 +30,6 @@ public class RateBLL {
 		}
 		
 	}
-	
-		
 		
 		
 	public static double getPayment(double r, double n, double p, double f, boolean t)
