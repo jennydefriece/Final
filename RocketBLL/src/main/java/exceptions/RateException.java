@@ -1,5 +1,7 @@
 package exceptions;
 
+import java.util.ArrayList;
+
 import rocketDomain.RateDomainModel;
 
 public class RateException extends Exception {
@@ -23,4 +25,3 @@ private RateDomainModel exceptRate;
 	
 	}
 }
-
